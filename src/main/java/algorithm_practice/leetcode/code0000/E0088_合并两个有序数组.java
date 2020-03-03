@@ -61,4 +61,16 @@ public class E0088_合并两个有序数组 {
         }
     }
 
+
+    public void mergeAgain(int[] A, int m, int[] B, int n) {
+        int index = m + n - 1;
+        m--;
+        n--;
+        while (m >= 0 && n >= 0) {
+            A[index--] = A[m] < B[n] ? B[n--] : A[m--];
+        }
+        System.arraycopy(B, 0, A, 0, n + 1);
+
+    }
+
 }
