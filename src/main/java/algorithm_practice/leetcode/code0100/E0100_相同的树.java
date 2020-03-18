@@ -1,4 +1,4 @@
-package algorithm_practice.leetcode.code0000;
+package algorithm_practice.leetcode.code0100;
 
 import common.datastructure.TreeNode;
 
