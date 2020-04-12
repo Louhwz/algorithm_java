@@ -1,0 +1,9 @@
+.idea/
+*.html
+*.iml
+*.js
+*.css
+package-list
+common/
+index-files/
+target

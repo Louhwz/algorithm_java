@@ -4,10 +4,7 @@ import common.datastructure.TreeNode;
 import org.junit.Test;
 import sun.reflect.generics.tree.Tree;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * 给定一个二叉树，检查它是否是镜像对称的。
@@ -93,15 +90,21 @@ public class E0101_对称二叉树 {
 
     @Test
     public void test101() {
-        Queue<TreeNode> test= new LinkedList<>();
-        test.add(null);
-        TreeNode root = new TreeNode(1);
-        root.left = new TreeNode(2);
-        root.right = new TreeNode(2);
-        root.left.left = null;
-        root.left.right = new TreeNode(4);
-        root.right.left = new TreeNode(4);
-        root.right.right = null;
-        System.out.println(isSymmetric(root));
+//        Queue<TreeNode> test= new LinkedList<>();
+//
+//        test.add(null);
+//        TreeNode root = new TreeNode(1);
+//        root.left = new TreeNode(2);
+//        root.right = new TreeNode(2);
+//        root.left.left = null;
+//        root.left.right = new TreeNode(4);
+//        root.right.left = new TreeNode(4);
+//        root.right.right = null;
+//        System.out.println(isSymmetric(root));
+        for (int i = 0; i < 20; i++) {
+            String uuid = UUID.randomUUID().toString().replace("-", "").toLowerCase();
+            System.out.println(uuid.length());
+        }
+
     }
 }
