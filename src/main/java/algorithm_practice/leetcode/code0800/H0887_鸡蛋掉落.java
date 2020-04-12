@@ -2,6 +2,9 @@ package algorithm_practice.leetcode.code0800;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * 你将获得 K 个鸡蛋，并可以使用一栋从 1 到 N  共有 N 层楼的建筑。
  * <p>
@@ -56,17 +59,17 @@ public class H0887_鸡蛋掉落 {
             dpTimes[1][i] = i;
         }
 
-/*
         for (int i = 2; i <= K; i++) {
             for (int j = 1; j <= N; j++) {
                 int ans = Integer.MAX_VALUE;
                 for (int n = 1; n <= j; n++) {
-                    ans = Math.min(ans, dpTimes[i - 1][n - 1], dpTimes[i][j - n]);
+                    ans = Math.min(ans, Math.max(dpTimes[i - 1][n - 1], dpTimes[i][j - n]) + 1);
                 }
                 dpTimes[i][j] = ans;
             }
         }
-*/
+        List<Integer> res = new ArrayList<>();
+        List<Integer> m = new ArrayList<>(res);
 
         return dpTimes[K][N];
     }
