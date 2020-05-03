@@ -9,6 +9,7 @@ import java.util.Map;
 import java.util.PriorityQueue;
 
 /**
+ * Least Frequently Used
  * H0460_LFU缓存
  * 设计并实现最不经常使用（LFU）缓存的数据结构。它应该支持以下操作：get 和 put。
  * <p>

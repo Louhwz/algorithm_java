@@ -8,9 +8,26 @@ public class ListNode {
         val = x;
     }
 
+    public ListNode(int[] arr) {
+        this.val = arr[0];
+        ListNode k = new ListNode(arr[1]);
+        ListNode tp = k;
+        for (int i = 2; i < arr.length; i++) {
+            tp.next = new ListNode(arr[i]);
+            tp = tp.next;
+        }
+        this.next = k;
+    }
+
     @Override
     public String toString() {
-        return val + "";
+        ListNode tp = this;
+        StringBuilder stringBuilder = new StringBuilder();
+        while (tp != null) {
+            stringBuilder.append(tp.val).append("->");
+            tp = tp.next;
+        }
+        return stringBuilder.delete(stringBuilder.length() - 2, stringBuilder.length()).toString();
     }
 
     public void print() {
