@@ -2,6 +2,7 @@ package algorithm_practice.leetcode.code0100;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -87,18 +88,17 @@ public class M0139_单词拆分 {
             }
         }
         return dp[s.length()];
-
-
     }
 
     @Test
     public void test() {
-        String s = "123";
-        String s2 = "1";
-        System.out.println(s.contains(s2));
-        System.out.println(s.indexOf("31"));
-        StringBuilder stringBuilder = new StringBuilder(s);
-        stringBuilder.insert(0, "asdf");
-        System.out.println(stringBuilder);
+        List<String> m = new ArrayList<>();
+        m.add("b");
+        //System.out.println(wordBreak("a",m));
+        System.out.println(wordBreak("a", new ArrayList<String>(){
+            {
+                add("b");
+            }
+        }));
     }
 }

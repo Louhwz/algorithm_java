@@ -16,7 +16,7 @@ public class E0206_反转链表 {
 
 
     public ListNode reverseListNoRecursion(ListNode head) {
-        if (head == null) {
+/*        if (head == null) {
             return null;
         }
         ListNode pre = head, curr = head.next;
@@ -27,7 +27,19 @@ public class E0206_反转链表 {
             pre = curr;
             curr = temp;
         }
-        return pre;
+        return pre;*/
+        ListNode pre = null;
+        ListNode after = head;
+        //三个指针，pre，head，after
+        //after初值指向head，在循环里head指向after，对after做判断，after首先赋值head.next
+        //反转，pre指向head
+        while(after!=null){
+            head = after;
+            after = head.next;
+            head.next = pre;
+            pre = head;
+        }
+        return head;
     }
 
     public ListNode reverseList(ListNode head) {
